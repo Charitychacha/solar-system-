@@ -1,0 +1,59 @@
+body {
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.solar-system {
+    position: relative;
+}
+
+.sun {
+    width: 100px;
+    height: 100px;
+    background-color: #ffdb58; /* Sun color */
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.planet {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.mercury {
+    background-color: #b0c4de; /* Mercury color */
+    animation: orbit 4s linear infinite;
+}
+
+.venus {
+    background-color: #d2b48c; /* Venus color */
+    animation: orbit 8s linear infinite;
+}
+
+.earth {
+    background-color: #6495ed; /* Earth color */
+    animation: orbit 12s linear infinite;
+}
+
+.mars {
+    background-color: #ff6347; /* Mars color */
+    animation: orbit 20s linear infinite;
+}
+
+@keyframes orbit {
+    from {
+        transform: rotate(0deg) translateX(100px) rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg) translateX(100px) rotate(-360deg);
+    }
+}
